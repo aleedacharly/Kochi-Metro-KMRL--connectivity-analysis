@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_a56f2f8873c23b4b145896aab2a36ff4 {
+                #map_424be9f8ff15c854c915096f8eafd204 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -50,6 +50,8 @@
             </script>
 
         
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
 </head>
 <body>
     
@@ -65,14 +67,14 @@
   <small>Source: KMRL Open GTFS Data</small>
 </div>
     
-            <div class="folium-map" id="map_a56f2f8873c23b4b145896aab2a36ff4" ></div>
+            <div class="folium-map" id="map_424be9f8ff15c854c915096f8eafd204" ></div>
         
 </body>
 <script>
     
     
-            var map_a56f2f8873c23b4b145896aab2a36ff4 = L.map(
-                "map_a56f2f8873c23b4b145896aab2a36ff4",
+            var map_424be9f8ff15c854c915096f8eafd204 = L.map(
+                "map_424be9f8ff15c854c915096f8eafd204",
                 {
                     center: [10.02, 76.31],
                     crs: L.CRS.EPSG3857,
@@ -89,7 +91,7 @@
 
         
     
-            var tile_layer_1f0b51ed88e2afa62bd1a5876416444a = L.tileLayer(
+            var tile_layer_2e1c1e785dc11c52d4a8cc5952cba7fa = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -106,33 +108,33 @@
             );
         
     
-            tile_layer_1f0b51ed88e2afa62bd1a5876416444a.addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            tile_layer_2e1c1e785dc11c52d4a8cc5952cba7fa.addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-            var circle_marker_fb6e0bbf8c6c467ea99a962c4d9e215b = L.circleMarker(
+            var circle_marker_5b75b161843f47329d7e55649cb97603 = L.circleMarker(
                 [10.1099, 76.3495],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_46a564ef1f82ac90a19121bce2e0f931 = L.popup({
+        var popup_15ed63b586a4bb88c1de225dada93f29 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_3e6920ce93071a8456834939b2152963 = $(`<div id="html_3e6920ce93071a8456834939b2152963" style="width: 100.0%; height: 100.0%;">             <b>Aluva</b><br>             Weekday Trips: 246<br>             Trips (one direction): 123<br>             Avg Headway: 8.8 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_46a564ef1f82ac90a19121bce2e0f931.setContent(html_3e6920ce93071a8456834939b2152963);
+                var html_2b8b69289edf79fa0aeb60d3cb971ccf = $(`<div id="html_2b8b69289edf79fa0aeb60d3cb971ccf" style="width: 100.0%; height: 100.0%;">             <b>Aluva</b><br>             Weekday Trips: 246<br>             Trips (one direction): 123<br>             Avg Headway: 8.8 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_15ed63b586a4bb88c1de225dada93f29.setContent(html_2b8b69289edf79fa0aeb60d3cb971ccf);
             
         
 
-        circle_marker_fb6e0bbf8c6c467ea99a962c4d9e215b.bindPopup(popup_46a564ef1f82ac90a19121bce2e0f931)
+        circle_marker_5b75b161843f47329d7e55649cb97603.bindPopup(popup_15ed63b586a4bb88c1de225dada93f29)
         ;
 
         
     
     
-            circle_marker_fb6e0bbf8c6c467ea99a962c4d9e215b.bindTooltip(
+            circle_marker_5b75b161843f47329d7e55649cb97603.bindTooltip(
                 `<div>
                      Aluva — 8.8 min headway
                  </div>`,
@@ -142,30 +144,30 @@
             );
         
     
-            var circle_marker_d2efd47ee2c31b7e170b9e256d8c15e1 = L.circleMarker(
+            var circle_marker_69094662abeda56b47a34adb802bbd3a = L.circleMarker(
                 [10.0951, 76.3466],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_79f221cdcf35e2de23531307f7ca65d7 = L.popup({
+        var popup_0c7f25f7f713231762d14c94adc04c3d = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_53b9dc402d756172fffedfc88458407a = $(`<div id="html_53b9dc402d756172fffedfc88458407a" style="width: 100.0%; height: 100.0%;">             <b>Pulinchodu</b><br>             Weekday Trips: 246<br>             Trips (one direction): 123<br>             Avg Headway: 8.8 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_79f221cdcf35e2de23531307f7ca65d7.setContent(html_53b9dc402d756172fffedfc88458407a);
+                var html_b938bb38f42cd456e1d4994ffd789ac7 = $(`<div id="html_b938bb38f42cd456e1d4994ffd789ac7" style="width: 100.0%; height: 100.0%;">             <b>Pulinchodu</b><br>             Weekday Trips: 246<br>             Trips (one direction): 123<br>             Avg Headway: 8.8 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_0c7f25f7f713231762d14c94adc04c3d.setContent(html_b938bb38f42cd456e1d4994ffd789ac7);
             
         
 
-        circle_marker_d2efd47ee2c31b7e170b9e256d8c15e1.bindPopup(popup_79f221cdcf35e2de23531307f7ca65d7)
+        circle_marker_69094662abeda56b47a34adb802bbd3a.bindPopup(popup_0c7f25f7f713231762d14c94adc04c3d)
         ;
 
         
     
     
-            circle_marker_d2efd47ee2c31b7e170b9e256d8c15e1.bindTooltip(
+            circle_marker_69094662abeda56b47a34adb802bbd3a.bindTooltip(
                 `<div>
                      Pulinchodu — 8.8 min headway
                  </div>`,
@@ -175,30 +177,30 @@
             );
         
     
-            var circle_marker_bec01631b775bac106389b97c72f0c25 = L.circleMarker(
+            var circle_marker_600bed141dee4b39ab0154e37c5a5763 = L.circleMarker(
                 [10.0873, 76.3428],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_e9415ead55f0bde82744a90bb5753ab5 = L.popup({
+        var popup_c73c8d57a2fc3f98b1bfabbb2a7aa0ed = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_edf7635cd9d6287d8a794d4e99c340ea = $(`<div id="html_edf7635cd9d6287d8a794d4e99c340ea" style="width: 100.0%; height: 100.0%;">             <b>Companypady</b><br>             Weekday Trips: 246<br>             Trips (one direction): 123<br>             Avg Headway: 8.8 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_e9415ead55f0bde82744a90bb5753ab5.setContent(html_edf7635cd9d6287d8a794d4e99c340ea);
+                var html_050225bce76c0c2d6ebd0d96021c1c0f = $(`<div id="html_050225bce76c0c2d6ebd0d96021c1c0f" style="width: 100.0%; height: 100.0%;">             <b>Companypady</b><br>             Weekday Trips: 246<br>             Trips (one direction): 123<br>             Avg Headway: 8.8 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_c73c8d57a2fc3f98b1bfabbb2a7aa0ed.setContent(html_050225bce76c0c2d6ebd0d96021c1c0f);
             
         
 
-        circle_marker_bec01631b775bac106389b97c72f0c25.bindPopup(popup_e9415ead55f0bde82744a90bb5753ab5)
+        circle_marker_600bed141dee4b39ab0154e37c5a5763.bindPopup(popup_c73c8d57a2fc3f98b1bfabbb2a7aa0ed)
         ;
 
         
     
     
-            circle_marker_bec01631b775bac106389b97c72f0c25.bindTooltip(
+            circle_marker_600bed141dee4b39ab0154e37c5a5763.bindTooltip(
                 `<div>
                      Companypady — 8.8 min headway
                  </div>`,
@@ -208,30 +210,30 @@
             );
         
     
-            var circle_marker_4b2368e1ec1af9dafac8eab8502da74f = L.circleMarker(
+            var circle_marker_b7629311d5f67e497d8e0d71920a9514 = L.circleMarker(
                 [10.0793, 76.3389],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_95ea09e031aaf11cdc2bba806f6acd50 = L.popup({
+        var popup_f133f2f4f7a029f4edf375d2fe20310e = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_731ea944502546f4f011dd48e67b12fd = $(`<div id="html_731ea944502546f4f011dd48e67b12fd" style="width: 100.0%; height: 100.0%;">             <b>Ambattukavu</b><br>             Weekday Trips: 246<br>             Trips (one direction): 123<br>             Avg Headway: 8.8 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_95ea09e031aaf11cdc2bba806f6acd50.setContent(html_731ea944502546f4f011dd48e67b12fd);
+                var html_bfe226d8ba6cda352831b6a4371be75b = $(`<div id="html_bfe226d8ba6cda352831b6a4371be75b" style="width: 100.0%; height: 100.0%;">             <b>Ambattukavu</b><br>             Weekday Trips: 246<br>             Trips (one direction): 123<br>             Avg Headway: 8.8 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_f133f2f4f7a029f4edf375d2fe20310e.setContent(html_bfe226d8ba6cda352831b6a4371be75b);
             
         
 
-        circle_marker_4b2368e1ec1af9dafac8eab8502da74f.bindPopup(popup_95ea09e031aaf11cdc2bba806f6acd50)
+        circle_marker_b7629311d5f67e497d8e0d71920a9514.bindPopup(popup_f133f2f4f7a029f4edf375d2fe20310e)
         ;
 
         
     
     
-            circle_marker_4b2368e1ec1af9dafac8eab8502da74f.bindTooltip(
+            circle_marker_b7629311d5f67e497d8e0d71920a9514.bindTooltip(
                 `<div>
                      Ambattukavu — 8.8 min headway
                  </div>`,
@@ -241,30 +243,30 @@
             );
         
     
-            var circle_marker_88c09472880ecf32b352824a0f31a00b = L.circleMarker(
+            var circle_marker_5faeb22e878ef7e7edd2d49991d778e9 = L.circleMarker(
                 [10.0727, 76.3336],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_146d49761734d0e793677ce86d8a24e2 = L.popup({
+        var popup_95ea09edaa52566cffb36f7fd927203c = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_99b957843e9eee083bdcf1e314ac7719 = $(`<div id="html_99b957843e9eee083bdcf1e314ac7719" style="width: 100.0%; height: 100.0%;">             <b>Muttom</b><br>             Weekday Trips: 255<br>             Trips (one direction): 127<br>             Avg Headway: 8.5 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_146d49761734d0e793677ce86d8a24e2.setContent(html_99b957843e9eee083bdcf1e314ac7719);
+                var html_5689d50a856cce46049ab84ef390d709 = $(`<div id="html_5689d50a856cce46049ab84ef390d709" style="width: 100.0%; height: 100.0%;">             <b>Muttom</b><br>             Weekday Trips: 255<br>             Trips (one direction): 127<br>             Avg Headway: 8.5 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_95ea09edaa52566cffb36f7fd927203c.setContent(html_5689d50a856cce46049ab84ef390d709);
             
         
 
-        circle_marker_88c09472880ecf32b352824a0f31a00b.bindPopup(popup_146d49761734d0e793677ce86d8a24e2)
+        circle_marker_5faeb22e878ef7e7edd2d49991d778e9.bindPopup(popup_95ea09edaa52566cffb36f7fd927203c)
         ;
 
         
     
     
-            circle_marker_88c09472880ecf32b352824a0f31a00b.bindTooltip(
+            circle_marker_5faeb22e878ef7e7edd2d49991d778e9.bindTooltip(
                 `<div>
                      Muttom — 8.5 min headway
                  </div>`,
@@ -274,30 +276,30 @@
             );
         
     
-            var circle_marker_42cd6bcebf32395b5b16f997074f597f = L.circleMarker(
+            var circle_marker_163ec098cffc5384d0123699acc488f2 = L.circleMarker(
                 [10.0586, 76.322],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_f5814e17208380ced957829408ed4f42 = L.popup({
+        var popup_0129cdea9615d8443771c56dc38d26a6 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_33ad0b5152f9db3f10a9920bbc2eb792 = $(`<div id="html_33ad0b5152f9db3f10a9920bbc2eb792" style="width: 100.0%; height: 100.0%;">             <b>Kalamassery</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_f5814e17208380ced957829408ed4f42.setContent(html_33ad0b5152f9db3f10a9920bbc2eb792);
+                var html_a18ac2a47a6bb7a6db6255fbd1ab05a0 = $(`<div id="html_a18ac2a47a6bb7a6db6255fbd1ab05a0" style="width: 100.0%; height: 100.0%;">             <b>Kalamassery</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_0129cdea9615d8443771c56dc38d26a6.setContent(html_a18ac2a47a6bb7a6db6255fbd1ab05a0);
             
         
 
-        circle_marker_42cd6bcebf32395b5b16f997074f597f.bindPopup(popup_f5814e17208380ced957829408ed4f42)
+        circle_marker_163ec098cffc5384d0123699acc488f2.bindPopup(popup_0129cdea9615d8443771c56dc38d26a6)
         ;
 
         
     
     
-            circle_marker_42cd6bcebf32395b5b16f997074f597f.bindTooltip(
+            circle_marker_163ec098cffc5384d0123699acc488f2.bindTooltip(
                 `<div>
                      Kalamassery — 8.9 min headway
                  </div>`,
@@ -307,30 +309,30 @@
             );
         
     
-            var circle_marker_0c4224464f829544f73a90a05ed97203 = L.circleMarker(
+            var circle_marker_dad5c5021d994c1910736e57d63e59ad = L.circleMarker(
                 [10.0467, 76.3182],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_8ba5e05e2302a6ea1830109cb9c6a692 = L.popup({
+        var popup_81cba88b273903168b1cbe6d1e600da4 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_8c4eeb50d8a88be95ca6b9f49dde41f7 = $(`<div id="html_8c4eeb50d8a88be95ca6b9f49dde41f7" style="width: 100.0%; height: 100.0%;">             <b>Cochin University</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_8ba5e05e2302a6ea1830109cb9c6a692.setContent(html_8c4eeb50d8a88be95ca6b9f49dde41f7);
+                var html_3afd474c7e487af00c2d8d62a2daa018 = $(`<div id="html_3afd474c7e487af00c2d8d62a2daa018" style="width: 100.0%; height: 100.0%;">             <b>Cochin University</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_81cba88b273903168b1cbe6d1e600da4.setContent(html_3afd474c7e487af00c2d8d62a2daa018);
             
         
 
-        circle_marker_0c4224464f829544f73a90a05ed97203.bindPopup(popup_8ba5e05e2302a6ea1830109cb9c6a692)
+        circle_marker_dad5c5021d994c1910736e57d63e59ad.bindPopup(popup_81cba88b273903168b1cbe6d1e600da4)
         ;
 
         
     
     
-            circle_marker_0c4224464f829544f73a90a05ed97203.bindTooltip(
+            circle_marker_dad5c5021d994c1910736e57d63e59ad.bindTooltip(
                 `<div>
                      Cochin University — 8.9 min headway
                  </div>`,
@@ -340,30 +342,30 @@
             );
         
     
-            var circle_marker_c63bf01a4c7c9f9c5e97ddb55038582f = L.circleMarker(
+            var circle_marker_1c2b8e20ab60b90e6c4d36cb9a3df808 = L.circleMarker(
                 [10.0361, 76.3144],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_aa98e8d7c220191c5aa6a26e72d913ab = L.popup({
+        var popup_3026b9e4369070fe0fc30c02e8b72487 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_91986b4f7c7317ed2b2134ebd7a23a54 = $(`<div id="html_91986b4f7c7317ed2b2134ebd7a23a54" style="width: 100.0%; height: 100.0%;">             <b>Pathadipalam</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_aa98e8d7c220191c5aa6a26e72d913ab.setContent(html_91986b4f7c7317ed2b2134ebd7a23a54);
+                var html_8bd3fb5f3e297998e378b87a6d735f67 = $(`<div id="html_8bd3fb5f3e297998e378b87a6d735f67" style="width: 100.0%; height: 100.0%;">             <b>Pathadipalam</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_3026b9e4369070fe0fc30c02e8b72487.setContent(html_8bd3fb5f3e297998e378b87a6d735f67);
             
         
 
-        circle_marker_c63bf01a4c7c9f9c5e97ddb55038582f.bindPopup(popup_aa98e8d7c220191c5aa6a26e72d913ab)
+        circle_marker_1c2b8e20ab60b90e6c4d36cb9a3df808.bindPopup(popup_3026b9e4369070fe0fc30c02e8b72487)
         ;
 
         
     
     
-            circle_marker_c63bf01a4c7c9f9c5e97ddb55038582f.bindTooltip(
+            circle_marker_1c2b8e20ab60b90e6c4d36cb9a3df808.bindTooltip(
                 `<div>
                      Pathadipalam — 8.9 min headway
                  </div>`,
@@ -373,30 +375,30 @@
             );
         
     
-            var circle_marker_69340734a790e9b7b607174fc5ca7019 = L.circleMarker(
+            var circle_marker_d78a80aea2382a80dd4d2f3b9ed8aeeb = L.circleMarker(
                 [10.0251, 76.3083],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_f71b0e1c9bc87b2588ddff6ccd257acd = L.popup({
+        var popup_12c1b8cb559a89b32cb49ea4cdcf3852 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_6865bbcc85d248967f4863c2a3bc736f = $(`<div id="html_6865bbcc85d248967f4863c2a3bc736f" style="width: 100.0%; height: 100.0%;">             <b>Edapally</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_f71b0e1c9bc87b2588ddff6ccd257acd.setContent(html_6865bbcc85d248967f4863c2a3bc736f);
+                var html_eeaf9ebaa12b85761a605138e047944b = $(`<div id="html_eeaf9ebaa12b85761a605138e047944b" style="width: 100.0%; height: 100.0%;">             <b>Edapally</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_12c1b8cb559a89b32cb49ea4cdcf3852.setContent(html_eeaf9ebaa12b85761a605138e047944b);
             
         
 
-        circle_marker_69340734a790e9b7b607174fc5ca7019.bindPopup(popup_f71b0e1c9bc87b2588ddff6ccd257acd)
+        circle_marker_d78a80aea2382a80dd4d2f3b9ed8aeeb.bindPopup(popup_12c1b8cb559a89b32cb49ea4cdcf3852)
         ;
 
         
     
     
-            circle_marker_69340734a790e9b7b607174fc5ca7019.bindTooltip(
+            circle_marker_d78a80aea2382a80dd4d2f3b9ed8aeeb.bindTooltip(
                 `<div>
                      Edapally — 8.9 min headway
                  </div>`,
@@ -406,30 +408,30 @@
             );
         
     
-            var circle_marker_d2d4a372ca8e60fccde894d16683c29d = L.circleMarker(
+            var circle_marker_6604a0d921f794e41bfa23ac58d506de = L.circleMarker(
                 [10.0152, 76.3023],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_5bc081c145e84e7dd550c8c2ac93305a = L.popup({
+        var popup_188c124ebc77db7e4fc7fe80e0b59df1 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_18895f56d4dd82a7c62dadf793462bb3 = $(`<div id="html_18895f56d4dd82a7c62dadf793462bb3" style="width: 100.0%; height: 100.0%;">             <b>Changampuzha Park</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_5bc081c145e84e7dd550c8c2ac93305a.setContent(html_18895f56d4dd82a7c62dadf793462bb3);
+                var html_809b11552b7c2768b6795de2abafc8ff = $(`<div id="html_809b11552b7c2768b6795de2abafc8ff" style="width: 100.0%; height: 100.0%;">             <b>Changampuzha Park</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_188c124ebc77db7e4fc7fe80e0b59df1.setContent(html_809b11552b7c2768b6795de2abafc8ff);
             
         
 
-        circle_marker_d2d4a372ca8e60fccde894d16683c29d.bindPopup(popup_5bc081c145e84e7dd550c8c2ac93305a)
+        circle_marker_6604a0d921f794e41bfa23ac58d506de.bindPopup(popup_188c124ebc77db7e4fc7fe80e0b59df1)
         ;
 
         
     
     
-            circle_marker_d2d4a372ca8e60fccde894d16683c29d.bindTooltip(
+            circle_marker_6604a0d921f794e41bfa23ac58d506de.bindTooltip(
                 `<div>
                      Changampuzha Park — 8.9 min headway
                  </div>`,
@@ -439,30 +441,30 @@
             );
         
     
-            var circle_marker_31b4ceb9fb75f650eae845bba0486f2a = L.circleMarker(
+            var circle_marker_f088cd887ba2b71f97190b5d7f839d25 = L.circleMarker(
                 [10.0064, 76.3048],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_8ad6465520982cd461b88812aba33c79 = L.popup({
+        var popup_a99e73b8f9166b4516060d13a036f08e = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_84791d6cba1647a4bffbd91b3feeaf70 = $(`<div id="html_84791d6cba1647a4bffbd91b3feeaf70" style="width: 100.0%; height: 100.0%;">             <b>Palarivattom</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_8ad6465520982cd461b88812aba33c79.setContent(html_84791d6cba1647a4bffbd91b3feeaf70);
+                var html_2ce9fe6052f871903095a3919b129939 = $(`<div id="html_2ce9fe6052f871903095a3919b129939" style="width: 100.0%; height: 100.0%;">             <b>Palarivattom</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_a99e73b8f9166b4516060d13a036f08e.setContent(html_2ce9fe6052f871903095a3919b129939);
             
         
 
-        circle_marker_31b4ceb9fb75f650eae845bba0486f2a.bindPopup(popup_8ad6465520982cd461b88812aba33c79)
+        circle_marker_f088cd887ba2b71f97190b5d7f839d25.bindPopup(popup_a99e73b8f9166b4516060d13a036f08e)
         ;
 
         
     
     
-            circle_marker_31b4ceb9fb75f650eae845bba0486f2a.bindTooltip(
+            circle_marker_f088cd887ba2b71f97190b5d7f839d25.bindTooltip(
                 `<div>
                      Palarivattom — 8.9 min headway
                  </div>`,
@@ -472,30 +474,30 @@
             );
         
     
-            var circle_marker_91e24b78df88a48079594ffeac4ba85d = L.circleMarker(
+            var circle_marker_17e98e4e51d369584c5115e4fe62385d = L.circleMarker(
                 [10.0002, 76.2989],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_1264f429e896167a4224629e7e89942d = L.popup({
+        var popup_9623deca5662efe9ff7675c102ccd126 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_5c394b20554a326acc8be97391be34dc = $(`<div id="html_5c394b20554a326acc8be97391be34dc" style="width: 100.0%; height: 100.0%;">             <b>JLN Stadium</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_1264f429e896167a4224629e7e89942d.setContent(html_5c394b20554a326acc8be97391be34dc);
+                var html_72a0302db21c80e9fbd2b1a17b20e16a = $(`<div id="html_72a0302db21c80e9fbd2b1a17b20e16a" style="width: 100.0%; height: 100.0%;">             <b>JLN Stadium</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_9623deca5662efe9ff7675c102ccd126.setContent(html_72a0302db21c80e9fbd2b1a17b20e16a);
             
         
 
-        circle_marker_91e24b78df88a48079594ffeac4ba85d.bindPopup(popup_1264f429e896167a4224629e7e89942d)
+        circle_marker_17e98e4e51d369584c5115e4fe62385d.bindPopup(popup_9623deca5662efe9ff7675c102ccd126)
         ;
 
         
     
     
-            circle_marker_91e24b78df88a48079594ffeac4ba85d.bindTooltip(
+            circle_marker_17e98e4e51d369584c5115e4fe62385d.bindTooltip(
                 `<div>
                      JLN Stadium — 8.9 min headway
                  </div>`,
@@ -505,30 +507,30 @@
             );
         
     
-            var circle_marker_9ff6b7964bb705116a992a8546010def = L.circleMarker(
+            var circle_marker_ada3e6e4abf3ed14b48c377a97bfc382 = L.circleMarker(
                 [9.9943, 76.2914],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_69ab670a5a8a66cdf9807e4f6f43f78e = L.popup({
+        var popup_f5a7394951ab0dd1236d8416063feea7 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_0e8f001d13ce2b8b001e8df827118ddb = $(`<div id="html_0e8f001d13ce2b8b001e8df827118ddb" style="width: 100.0%; height: 100.0%;">             <b>Kaloor</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_69ab670a5a8a66cdf9807e4f6f43f78e.setContent(html_0e8f001d13ce2b8b001e8df827118ddb);
+                var html_1e391858002a4a20628c5ac041183737 = $(`<div id="html_1e391858002a4a20628c5ac041183737" style="width: 100.0%; height: 100.0%;">             <b>Kaloor</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_f5a7394951ab0dd1236d8416063feea7.setContent(html_1e391858002a4a20628c5ac041183737);
             
         
 
-        circle_marker_9ff6b7964bb705116a992a8546010def.bindPopup(popup_69ab670a5a8a66cdf9807e4f6f43f78e)
+        circle_marker_ada3e6e4abf3ed14b48c377a97bfc382.bindPopup(popup_f5a7394951ab0dd1236d8416063feea7)
         ;
 
         
     
     
-            circle_marker_9ff6b7964bb705116a992a8546010def.bindTooltip(
+            circle_marker_ada3e6e4abf3ed14b48c377a97bfc382.bindTooltip(
                 `<div>
                      Kaloor — 8.9 min headway
                  </div>`,
@@ -538,30 +540,30 @@
             );
         
     
-            var circle_marker_b7b9443509c74aedf0a9d72e9269fff4 = L.circleMarker(
+            var circle_marker_34e8697f6d3038fde40324e797926423 = L.circleMarker(
                 [9.9913775, 76.2883601],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_192b3c7664c0160742574744969d4976 = L.popup({
+        var popup_59cb5cb81fcb8676f1873048372ff2ea = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_ccdde0f345bcedb4ba5822fcfa143f46 = $(`<div id="html_ccdde0f345bcedb4ba5822fcfa143f46" style="width: 100.0%; height: 100.0%;">             <b>Town Hall</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_192b3c7664c0160742574744969d4976.setContent(html_ccdde0f345bcedb4ba5822fcfa143f46);
+                var html_be9a585cc4e1412eca0137f1a42d74f8 = $(`<div id="html_be9a585cc4e1412eca0137f1a42d74f8" style="width: 100.0%; height: 100.0%;">             <b>Town Hall</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_59cb5cb81fcb8676f1873048372ff2ea.setContent(html_be9a585cc4e1412eca0137f1a42d74f8);
             
         
 
-        circle_marker_b7b9443509c74aedf0a9d72e9269fff4.bindPopup(popup_192b3c7664c0160742574744969d4976)
+        circle_marker_34e8697f6d3038fde40324e797926423.bindPopup(popup_59cb5cb81fcb8676f1873048372ff2ea)
         ;
 
         
     
     
-            circle_marker_b7b9443509c74aedf0a9d72e9269fff4.bindTooltip(
+            circle_marker_34e8697f6d3038fde40324e797926423.bindTooltip(
                 `<div>
                      Town Hall — 8.9 min headway
                  </div>`,
@@ -571,30 +573,30 @@
             );
         
     
-            var circle_marker_5dd5ab446d5c448928073403b318e798 = L.circleMarker(
+            var circle_marker_92564e6c169e16f05a88acd4bfca7145 = L.circleMarker(
                 [9.9834, 76.2823],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_4879da78109b095d14e51891d1d3d3da = L.popup({
+        var popup_4e587f54bc7e411a93edb55aac1b42db = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_a62b90751a142fa3d09275184429514f = $(`<div id="html_a62b90751a142fa3d09275184429514f" style="width: 100.0%; height: 100.0%;">             <b>MG Road</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_4879da78109b095d14e51891d1d3d3da.setContent(html_a62b90751a142fa3d09275184429514f);
+                var html_77ce7cd17781462f19ca6aeeb3fa01ba = $(`<div id="html_77ce7cd17781462f19ca6aeeb3fa01ba" style="width: 100.0%; height: 100.0%;">             <b>MG Road</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_4e587f54bc7e411a93edb55aac1b42db.setContent(html_77ce7cd17781462f19ca6aeeb3fa01ba);
             
         
 
-        circle_marker_5dd5ab446d5c448928073403b318e798.bindPopup(popup_4879da78109b095d14e51891d1d3d3da)
+        circle_marker_92564e6c169e16f05a88acd4bfca7145.bindPopup(popup_4e587f54bc7e411a93edb55aac1b42db)
         ;
 
         
     
     
-            circle_marker_5dd5ab446d5c448928073403b318e798.bindTooltip(
+            circle_marker_92564e6c169e16f05a88acd4bfca7145.bindTooltip(
                 `<div>
                      MG Road — 8.9 min headway
                  </div>`,
@@ -604,30 +606,30 @@
             );
         
     
-            var circle_marker_335e7783ac46c5021558a08ea2770bf4 = L.circleMarker(
+            var circle_marker_de2ce2cade3828ce1338c046e9f70cd8 = L.circleMarker(
                 [9.9732, 76.2851],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_a09af34fb5e4c5b0f7425ce9b7823495 = L.popup({
+        var popup_7c96ad0c9d493b13a178ed3637f5ade3 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_97296d2371c91e505b74bcff6aa15c80 = $(`<div id="html_97296d2371c91e505b74bcff6aa15c80" style="width: 100.0%; height: 100.0%;">             <b>Maharajas College</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_a09af34fb5e4c5b0f7425ce9b7823495.setContent(html_97296d2371c91e505b74bcff6aa15c80);
+                var html_ba0ac93ceeb99a07b8f1123befe935c3 = $(`<div id="html_ba0ac93ceeb99a07b8f1123befe935c3" style="width: 100.0%; height: 100.0%;">             <b>Maharajas College</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_7c96ad0c9d493b13a178ed3637f5ade3.setContent(html_ba0ac93ceeb99a07b8f1123befe935c3);
             
         
 
-        circle_marker_335e7783ac46c5021558a08ea2770bf4.bindPopup(popup_a09af34fb5e4c5b0f7425ce9b7823495)
+        circle_marker_de2ce2cade3828ce1338c046e9f70cd8.bindPopup(popup_7c96ad0c9d493b13a178ed3637f5ade3)
         ;
 
         
     
     
-            circle_marker_335e7783ac46c5021558a08ea2770bf4.bindTooltip(
+            circle_marker_de2ce2cade3828ce1338c046e9f70cd8.bindTooltip(
                 `<div>
                      Maharajas College — 8.9 min headway
                  </div>`,
@@ -637,30 +639,30 @@
             );
         
     
-            var circle_marker_1df275106039acecb1fdb7a40a77a5d2 = L.circleMarker(
+            var circle_marker_9584b911dd2c4a7b7439048e69252762 = L.circleMarker(
                 [9.9686042, 76.2895744],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_2d4e184fcf730cde4d95414373c57791 = L.popup({
+        var popup_1a3cfa7a56724960ca3cf636265b9703 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_65a8afcab05c1644ea0fc02e8fe0fbf5 = $(`<div id="html_65a8afcab05c1644ea0fc02e8fe0fbf5" style="width: 100.0%; height: 100.0%;">             <b>Ernakulam South</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_2d4e184fcf730cde4d95414373c57791.setContent(html_65a8afcab05c1644ea0fc02e8fe0fbf5);
+                var html_51617af738facfa4e6b17f5e3bbfcbe8 = $(`<div id="html_51617af738facfa4e6b17f5e3bbfcbe8" style="width: 100.0%; height: 100.0%;">             <b>Ernakulam South</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_1a3cfa7a56724960ca3cf636265b9703.setContent(html_51617af738facfa4e6b17f5e3bbfcbe8);
             
         
 
-        circle_marker_1df275106039acecb1fdb7a40a77a5d2.bindPopup(popup_2d4e184fcf730cde4d95414373c57791)
+        circle_marker_9584b911dd2c4a7b7439048e69252762.bindPopup(popup_1a3cfa7a56724960ca3cf636265b9703)
         ;
 
         
     
     
-            circle_marker_1df275106039acecb1fdb7a40a77a5d2.bindTooltip(
+            circle_marker_9584b911dd2c4a7b7439048e69252762.bindTooltip(
                 `<div>
                      Ernakulam South — 8.9 min headway
                  </div>`,
@@ -670,30 +672,30 @@
             );
         
     
-            var circle_marker_f926452ffb19327bb0a7b0b1659eb115 = L.circleMarker(
+            var circle_marker_8bcbd6befd80baf98eec2bb1ded1d6c2 = L.circleMarker(
                 [9.9665809, 76.2981877],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_75a58a89185c52e65b71aaf35ab0383b = L.popup({
+        var popup_3e0f348cad9a3e89019bc74620f1b608 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_622c608f77ce4fa4bcb9415b2e845e6a = $(`<div id="html_622c608f77ce4fa4bcb9415b2e845e6a" style="width: 100.0%; height: 100.0%;">             <b>Kadavanthra</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_75a58a89185c52e65b71aaf35ab0383b.setContent(html_622c608f77ce4fa4bcb9415b2e845e6a);
+                var html_36ced6a81da02c963cbfed6c3daa25b8 = $(`<div id="html_36ced6a81da02c963cbfed6c3daa25b8" style="width: 100.0%; height: 100.0%;">             <b>Kadavanthra</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg Headway: 8.9 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_3e0f348cad9a3e89019bc74620f1b608.setContent(html_36ced6a81da02c963cbfed6c3daa25b8);
             
         
 
-        circle_marker_f926452ffb19327bb0a7b0b1659eb115.bindPopup(popup_75a58a89185c52e65b71aaf35ab0383b)
+        circle_marker_8bcbd6befd80baf98eec2bb1ded1d6c2.bindPopup(popup_3e0f348cad9a3e89019bc74620f1b608)
         ;
 
         
     
     
-            circle_marker_f926452ffb19327bb0a7b0b1659eb115.bindTooltip(
+            circle_marker_8bcbd6befd80baf98eec2bb1ded1d6c2.bindTooltip(
                 `<div>
                      Kadavanthra — 8.9 min headway
                  </div>`,
@@ -703,30 +705,30 @@
             );
         
     
-            var circle_marker_0ea0096ccbb338b70fab3d04e5dc2632 = L.circleMarker(
+            var circle_marker_6b979242be4616d90fdbe1c704501c0f = L.circleMarker(
                 [9.9671248, 76.3084899],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_33aad5b184a3d3eb045580b4ddfb4f6e = L.popup({
+        var popup_41a21784ad9025868dd736c4243686f6 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_f4d58ee2576d53f297d16654c5f71027 = $(`<div id="html_f4d58ee2576d53f297d16654c5f71027" style="width: 100.0%; height: 100.0%;">             <b>Elamkulam</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg Headway: 9.0 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_33aad5b184a3d3eb045580b4ddfb4f6e.setContent(html_f4d58ee2576d53f297d16654c5f71027);
+                var html_f025539d9b4976967ce931e19e18ff35 = $(`<div id="html_f025539d9b4976967ce931e19e18ff35" style="width: 100.0%; height: 100.0%;">             <b>Elamkulam</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg Headway: 9.0 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_41a21784ad9025868dd736c4243686f6.setContent(html_f025539d9b4976967ce931e19e18ff35);
             
         
 
-        circle_marker_0ea0096ccbb338b70fab3d04e5dc2632.bindPopup(popup_33aad5b184a3d3eb045580b4ddfb4f6e)
+        circle_marker_6b979242be4616d90fdbe1c704501c0f.bindPopup(popup_41a21784ad9025868dd736c4243686f6)
         ;
 
         
     
     
-            circle_marker_0ea0096ccbb338b70fab3d04e5dc2632.bindTooltip(
+            circle_marker_6b979242be4616d90fdbe1c704501c0f.bindTooltip(
                 `<div>
                      Elamkulam — 9.0 min headway
                  </div>`,
@@ -736,30 +738,30 @@
             );
         
     
-            var circle_marker_f36f4cbe07087dc08df33f1bdce08bb7 = L.circleMarker(
+            var circle_marker_f8f8d3163e6792905b547dc8bd736041 = L.circleMarker(
                 [9.9675457, 76.3203664],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_f90d13fd2f651bd20311bd833716de8e = L.popup({
+        var popup_5cca280f50ba2167ec27682b3fb8be9c = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_6918e588cc03da75fd3b358fcf5cc27c = $(`<div id="html_6918e588cc03da75fd3b358fcf5cc27c" style="width: 100.0%; height: 100.0%;">             <b>Vyttila</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg Headway: 9.0 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_f90d13fd2f651bd20311bd833716de8e.setContent(html_6918e588cc03da75fd3b358fcf5cc27c);
+                var html_5c1deecc253a9db7444b128a672dd187 = $(`<div id="html_5c1deecc253a9db7444b128a672dd187" style="width: 100.0%; height: 100.0%;">             <b>Vyttila</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg Headway: 9.0 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_5cca280f50ba2167ec27682b3fb8be9c.setContent(html_5c1deecc253a9db7444b128a672dd187);
             
         
 
-        circle_marker_f36f4cbe07087dc08df33f1bdce08bb7.bindPopup(popup_f90d13fd2f651bd20311bd833716de8e)
+        circle_marker_f8f8d3163e6792905b547dc8bd736041.bindPopup(popup_5cca280f50ba2167ec27682b3fb8be9c)
         ;
 
         
     
     
-            circle_marker_f36f4cbe07087dc08df33f1bdce08bb7.bindTooltip(
+            circle_marker_f8f8d3163e6792905b547dc8bd736041.bindTooltip(
                 `<div>
                      Vyttila — 9.0 min headway
                  </div>`,
@@ -769,30 +771,30 @@
             );
         
     
-            var circle_marker_032c353efa95b8e422bc5193213152ff = L.circleMarker(
+            var circle_marker_911a1bfe54a6c2a54d9e8d6689720437 = L.circleMarker(
                 [9.9600311, 76.3236762],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_df3fecc35815264816250ef436947a75 = L.popup({
+        var popup_5de41d43489b771cc11effb55d9abdd2 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_4e89de190591f05cf5e253e41d120729 = $(`<div id="html_4e89de190591f05cf5e253e41d120729" style="width: 100.0%; height: 100.0%;">             <b>Thykoodam</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg Headway: 9.0 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_df3fecc35815264816250ef436947a75.setContent(html_4e89de190591f05cf5e253e41d120729);
+                var html_136812e9f157a195d5470fb441a9009f = $(`<div id="html_136812e9f157a195d5470fb441a9009f" style="width: 100.0%; height: 100.0%;">             <b>Thykoodam</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg Headway: 9.0 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_5de41d43489b771cc11effb55d9abdd2.setContent(html_136812e9f157a195d5470fb441a9009f);
             
         
 
-        circle_marker_032c353efa95b8e422bc5193213152ff.bindPopup(popup_df3fecc35815264816250ef436947a75)
+        circle_marker_911a1bfe54a6c2a54d9e8d6689720437.bindPopup(popup_5de41d43489b771cc11effb55d9abdd2)
         ;
 
         
     
     
-            circle_marker_032c353efa95b8e422bc5193213152ff.bindTooltip(
+            circle_marker_911a1bfe54a6c2a54d9e8d6689720437.bindTooltip(
                 `<div>
                      Thykoodam — 9.0 min headway
                  </div>`,
@@ -802,30 +804,30 @@
             );
         
     
-            var circle_marker_800c81be8d5091c1e93b4af4657a8673 = L.circleMarker(
+            var circle_marker_8846e19ff80d12438ed3f78bbef6aef7 = L.circleMarker(
                 [9.9524842, 76.3302101],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_02fde94ece6782d0c898a6b72de040da = L.popup({
+        var popup_2168211bc7b659473eb1fae9d67d9c3e = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_c08ab3b117c1308060917c088fcff8ba = $(`<div id="html_c08ab3b117c1308060917c088fcff8ba" style="width: 100.0%; height: 100.0%;">             <b>Pettah</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg Headway: 9.0 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_02fde94ece6782d0c898a6b72de040da.setContent(html_c08ab3b117c1308060917c088fcff8ba);
+                var html_0d4669da86efc30391e050030ff8d23c = $(`<div id="html_0d4669da86efc30391e050030ff8d23c" style="width: 100.0%; height: 100.0%;">             <b>Pettah</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg Headway: 9.0 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_2168211bc7b659473eb1fae9d67d9c3e.setContent(html_0d4669da86efc30391e050030ff8d23c);
             
         
 
-        circle_marker_800c81be8d5091c1e93b4af4657a8673.bindPopup(popup_02fde94ece6782d0c898a6b72de040da)
+        circle_marker_8846e19ff80d12438ed3f78bbef6aef7.bindPopup(popup_2168211bc7b659473eb1fae9d67d9c3e)
         ;
 
         
     
     
-            circle_marker_800c81be8d5091c1e93b4af4657a8673.bindTooltip(
+            circle_marker_8846e19ff80d12438ed3f78bbef6aef7.bindTooltip(
                 `<div>
                      Pettah — 9.0 min headway
                  </div>`,
@@ -835,30 +837,30 @@
             );
         
     
-            var circle_marker_5874a3913986496424af52f17e25e957 = L.circleMarker(
+            var circle_marker_7a6aaa19c18372a2a596da8ae4fc10bc = L.circleMarker(
                 [9.952838, 76.3394827],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_6e8c78523115d5974928985351cc3133 = L.popup({
+        var popup_02da7d4855cda735782318edbf0a24db = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_03a8b946dacbb45388de38d8b07e24a7 = $(`<div id="html_03a8b946dacbb45388de38d8b07e24a7" style="width: 100.0%; height: 100.0%;">             <b>Vadakkekotta</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg Headway: 9.0 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_6e8c78523115d5974928985351cc3133.setContent(html_03a8b946dacbb45388de38d8b07e24a7);
+                var html_12fdff7566bc62a092dcfce155815b4e = $(`<div id="html_12fdff7566bc62a092dcfce155815b4e" style="width: 100.0%; height: 100.0%;">             <b>Vadakkekotta</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg Headway: 9.0 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_02da7d4855cda735782318edbf0a24db.setContent(html_12fdff7566bc62a092dcfce155815b4e);
             
         
 
-        circle_marker_5874a3913986496424af52f17e25e957.bindPopup(popup_6e8c78523115d5974928985351cc3133)
+        circle_marker_7a6aaa19c18372a2a596da8ae4fc10bc.bindPopup(popup_02da7d4855cda735782318edbf0a24db)
         ;
 
         
     
     
-            circle_marker_5874a3913986496424af52f17e25e957.bindTooltip(
+            circle_marker_7a6aaa19c18372a2a596da8ae4fc10bc.bindTooltip(
                 `<div>
                      Vadakkekotta — 9.0 min headway
                  </div>`,
@@ -868,30 +870,30 @@
             );
         
     
-            var circle_marker_f3a57463425aacd87887fa14da0c4f82 = L.circleMarker(
+            var circle_marker_f72d254d7d73c5e4d7d860a5ead576df = L.circleMarker(
                 [9.9547532, 76.3458505],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_d3992ec7499ac6cf426aee849ef73c92 = L.popup({
+        var popup_b1e1fbdeeaa0315b13cf75de130d2d9c = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_a2743004b05d271db16dbbf2933c37d9 = $(`<div id="html_a2743004b05d271db16dbbf2933c37d9" style="width: 100.0%; height: 100.0%;">             <b>SN Junction</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg Headway: 9.0 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_d3992ec7499ac6cf426aee849ef73c92.setContent(html_a2743004b05d271db16dbbf2933c37d9);
+                var html_76cadbeae31fa59ec3dc39a87c5a6b7d = $(`<div id="html_76cadbeae31fa59ec3dc39a87c5a6b7d" style="width: 100.0%; height: 100.0%;">             <b>SN Junction</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg Headway: 9.0 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_b1e1fbdeeaa0315b13cf75de130d2d9c.setContent(html_76cadbeae31fa59ec3dc39a87c5a6b7d);
             
         
 
-        circle_marker_f3a57463425aacd87887fa14da0c4f82.bindPopup(popup_d3992ec7499ac6cf426aee849ef73c92)
+        circle_marker_f72d254d7d73c5e4d7d860a5ead576df.bindPopup(popup_b1e1fbdeeaa0315b13cf75de130d2d9c)
         ;
 
         
     
     
-            circle_marker_f3a57463425aacd87887fa14da0c4f82.bindTooltip(
+            circle_marker_f72d254d7d73c5e4d7d860a5ead576df.bindTooltip(
                 `<div>
                      SN Junction — 9.0 min headway
                  </div>`,
@@ -901,30 +903,30 @@
             );
         
     
-            var circle_marker_7eae8e6fb3e9f786d8f9f10110c8f94b = L.circleMarker(
+            var circle_marker_df375c9612a50d4d1965d535bafe88d2 = L.circleMarker(
                 [9.95078, 76.35183],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-        var popup_60645acd09f59cb260d6cda60d871a29 = L.popup({
+        var popup_e47ca674aed01e1ffffff9c5977fe5d8 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_3f01ba73ac7ff6f1e58e890b70b1855e = $(`<div id="html_3f01ba73ac7ff6f1e58e890b70b1855e" style="width: 100.0%; height: 100.0%;">             <b>Tripunithura</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg Headway: 9.0 min<br>             Risk Level: Medium Risk             </div>`)[0];
-                popup_60645acd09f59cb260d6cda60d871a29.setContent(html_3f01ba73ac7ff6f1e58e890b70b1855e);
+                var html_ca384a152b5890320d9367362492ecea = $(`<div id="html_ca384a152b5890320d9367362492ecea" style="width: 100.0%; height: 100.0%;">             <b>Tripunithura</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg Headway: 9.0 min<br>             Risk Level: Medium Risk             </div>`)[0];
+                popup_e47ca674aed01e1ffffff9c5977fe5d8.setContent(html_ca384a152b5890320d9367362492ecea);
             
         
 
-        circle_marker_7eae8e6fb3e9f786d8f9f10110c8f94b.bindPopup(popup_60645acd09f59cb260d6cda60d871a29)
+        circle_marker_df375c9612a50d4d1965d535bafe88d2.bindPopup(popup_e47ca674aed01e1ffffff9c5977fe5d8)
         ;
 
         
     
     
-            circle_marker_7eae8e6fb3e9f786d8f9f10110c8f94b.bindTooltip(
+            circle_marker_df375c9612a50d4d1965d535bafe88d2.bindTooltip(
                 `<div>
                      Tripunithura — 9.0 min headway
                  </div>`,
@@ -934,13 +936,13 @@
             );
         
     
-            var poly_line_2dd949a00df30e8041a3b215bc5dd26e = L.polyline(
+            var poly_line_124595609006f443a0147a49c9e71a71 = L.polyline(
                 [[10.1099, 76.3495], [10.0793, 76.3389], [10.0467, 76.3182], [10.0152, 76.3023], [10.0873, 76.3428], [10.0251, 76.3083], [9.9671248, 76.3084899], [9.9686042, 76.2895744], [10.0002, 76.2989], [9.9943, 76.2914], [10.0586, 76.322], [9.9665809, 76.2981877], [9.9732, 76.2851], [9.9834, 76.2823], [10.0727, 76.3336], [10.0064, 76.3048], [10.0361, 76.3144], [9.9524842, 76.3302101], [10.0951, 76.3466], [9.9547532, 76.3458505], [9.9600311, 76.3236762], [9.9913775, 76.2883601], [9.95078, 76.35183], [9.952838, 76.3394827], [9.9675457, 76.3203664]],
                 {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_a56f2f8873c23b4b145896aab2a36ff4);
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
         
     
-            poly_line_2dd949a00df30e8041a3b215bc5dd26e.bindTooltip(
+            poly_line_124595609006f443a0147a49c9e71a71.bindTooltip(
                 `<div>
                      KMRL Metro Line
                  </div>`,
@@ -948,6 +950,77 @@
   "sticky": true,
 }
             );
+        
+    
+            var marker_4a5081cb9cf8a54d84ed1ed9be65572a = L.marker(
+                [10.02, 76.31],
+                {
+}
+            ).addTo(map_424be9f8ff15c854c915096f8eafd204);
+        
+    
+            var icon_524eac5bd6c6529d8f52df0ecdc230d0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a859d56f8ff4dff4d4cc0650b4444bdd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bdfef4d06fee91d737ff95f72d6fe30f = $(`<div id="html_bdfef4d06fee91d737ff95f72d6fe30f" style="width: 100.0%; height: 100.0%;">Kochi, Kerala, India</div>`)[0];
+                popup_a859d56f8ff4dff4d4cc0650b4444bdd.setContent(html_bdfef4d06fee91d737ff95f72d6fe30f);
+            
+        
+
+        marker_4a5081cb9cf8a54d84ed1ed9be65572a.bindPopup(popup_a859d56f8ff4dff4d4cc0650b4444bdd)
+        ;
+
+        
+    
+    
+            marker_4a5081cb9cf8a54d84ed1ed9be65572a.bindTooltip(
+                `<div>
+                     Kochi, Kerala, India
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4a5081cb9cf8a54d84ed1ed9be65572a.setIcon(icon_524eac5bd6c6529d8f52df0ecdc230d0);
+            
+    
+            var tile_layer_d7b0cffbf6636cbcda3b0f31eb1d72ca = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detect_retina": false, "max_native_zoom": 20, "max_zoom": 20, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+            var mini_map_088f7b196315c0cb5486c19afd3b24ab = new L.Control.MiniMap(
+                tile_layer_d7b0cffbf6636cbcda3b0f31eb1d72ca,
+                {
+  "position": "bottomright",
+  "width": 150,
+  "height": 150,
+  "collapsedWidth": 25,
+  "collapsedHeight": 25,
+  "zoomLevelOffset": -7,
+  "centerFixed": false,
+  "zoomAnimation": false,
+  "toggleDisplay": true,
+  "autoToggleDisplay": false,
+  "minimized": false,
+}
+            );
+            map_424be9f8ff15c854c915096f8eafd204.addControl(mini_map_088f7b196315c0cb5486c19afd3b24ab);
         
 </script>
 </html>

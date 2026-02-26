@@ -1,0 +1,26 @@
+stop_id,stop_name,stop_lat,stop_lon,weekday_trips,one_direction_trips,avg_headway_min,risk
+PETT,Pettah,9.9524842,76.3302101,240,120,9.0,Medium Risk
+SNJN,SN Junction,9.9547532,76.3458505,240,120,9.0,Medium Risk
+EMKM,Elamkulam,9.9671248,76.3084899,240,120,9.0,Medium Risk
+THYK,Thykoodam,9.9600311,76.3236762,240,120,9.0,Medium Risk
+VYTA,Vyttila,9.9675457,76.3203664,240,120,9.0,Medium Risk
+TPHT,Tripunithura,9.95078,76.35183,240,120,9.0,Medium Risk
+VAKK,Vadakkekotta,9.952838,76.3394827,240,120,9.0,Medium Risk
+CCUV,Cochin University,10.0467,76.3182,242,121,8.9,Medium Risk
+EDAP,Edapally,10.0251,76.3083,242,121,8.9,Medium Risk
+ERSH,Ernakulam South,9.9686042,76.2895744,242,121,8.9,Medium Risk
+MACE,Maharajas College,9.9732,76.2851,242,121,8.9,Medium Risk
+MGRD,MG Road,9.9834,76.2823,242,121,8.9,Medium Risk
+TNHL,Town Hall,9.9913775,76.2883601,242,121,8.9,Medium Risk
+KALR,Kaloor,9.9943,76.2914,242,121,8.9,Medium Risk
+KLMT,Kalamassery,10.0586,76.322,242,121,8.9,Medium Risk
+PDPM,Pathadipalam,10.0361,76.3144,242,121,8.9,Medium Risk
+CGPP,Changampuzha Park,10.0152,76.3023,242,121,8.9,Medium Risk
+PARV,Palarivattom,10.0064,76.3048,242,121,8.9,Medium Risk
+JLSD,JLN Stadium,10.0002,76.2989,242,121,8.9,Medium Risk
+KVTR,Kadavanthra,9.9665809,76.2981877,242,121,8.9,Medium Risk
+ALVA,Aluva,10.1099,76.3495,246,123,8.8,Medium Risk
+ATTK,Ambattukavu,10.0793,76.3389,246,123,8.8,Medium Risk
+PNCU,Pulinchodu,10.0951,76.3466,246,123,8.8,Medium Risk
+CPPY,Companypady,10.0873,76.3428,246,123,8.8,Medium Risk
+MUTT,Muttom,10.0727,76.3336,255,127,8.5,Medium Risk
