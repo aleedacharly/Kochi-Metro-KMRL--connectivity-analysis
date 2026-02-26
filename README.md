@@ -53,7 +53,7 @@ less frequently served.
 
 | Map | Description |
 |---|---|
-| [`output/kochi_metro_headway_map.html`](output/kochi_metro_headway_map.html) | Metro stops colored by headway risk |
+| [`output/kochi_metro_headway_map.html`](output/kochi_metro_headway_map.html) | Metro stops colored by service frequency |
 | [`output/kochi_connectivity_map.html`](output/kochi_connectivity_map.html) | Full multimodal map — metro + bus + boat + feeder zones |
 
 Open either file in your browser to explore stops with full details in popups.
@@ -161,9 +161,8 @@ pip install pandas geopandas shapely folium requests
 
 ## ▶️ How to Run
 ```bash
-git clone https://github.com/yourusername/kochi-transit-analysis.git
-cd kochi-transit-analysis
-jupyter notebook analysis.ipynb
+git clone https://github.com/aleedacharly/Kochi-Metro-KMRL--connectivity-analysis.git
+cd Kochi-Metro-KMRL--connectivity-analysis
 ```
 
 Run all cells in order. The notebook will automatically download the
