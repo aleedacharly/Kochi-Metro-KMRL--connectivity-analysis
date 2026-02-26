@@ -1,13 +1,35 @@
-# 🚇 Kochi Metro (KMRL) Service Frequency Risk Analysis
+# 🚇 Kochi Multimodal Transit Connectivity Analysis
 
-A data analysis project using **open GTFS data** from Kochi Metro Rail Limited (KMRL)
-to evaluate service frequency across all 25 metro stops and assess passenger wait-time risk.
+A data analysis project using open GTFS data from **KMRL (Kochi Metro)** and
+**Jungle Bus / OpenStreetMap** to evaluate last-mile connectivity across all
+25 Kochi Metro stops — measuring how well each metro stop is served by
+buses and boats within walking distance.
 
-## 🔍 Key Finding
+---
 
-> All 25 KMRL metro stops operate with an average headway of **~8.9 minutes** on weekdays —
-> above the **7-minute urban transit benchmark** for good frequency service.
-> This classifies every stop as **Medium Risk** for passenger wait time.
+## 🔍 Key Findings
+
+### 1. Last-Mile Connectivity
+> **5 out of 25 metro stops are poorly connected** — fewer than 5 bus stops
+> within 500m walking distance and zero boat connectivity.
+
+| Connectivity Level | Stops | 
+|---|---|
+| 🟢 Well Connected (≥15 bus stops within 500m) | 1 |
+| 🟡 Moderately Connected (5–14 stops) | 19 |
+| 🔴 Poorly Connected (<5 stops) | 5 |
+
+**Poorly connected stops:** Companypady, Ambattukavu, Muttom, Pathadipalam, SN Junction
+
+### 2. The Feeder Gap
+All 5 poorly connected stops have **7–9 bus stops within 1km** — meaning
+the infrastructure already exists nearby. The fix is not building new
+infrastructure but **extending existing bus routes by ~500m** or adding
+a dedicated feeder service.
+
+### 3. Service Frequency (Headway)
+> KMRL operates with an average headway of **~8.9 minutes** on weekdays —
+> above the 7-minute urban benchmark for good frequency service.
 
 | Metric | Value |
 |---|---|
@@ -16,51 +38,149 @@ to evaluate service frequency across all 25 metro stops and assess passenger wai
 | Weekend trips | 195 |
 | Avg headway (weekday) | 8.9 min |
 | Urban benchmark | < 7 min |
-| Risk level | Medium Risk (all stops) |
+| Weekend service drop | 24% fewer trains |
 
-Weekend service is **24% lower** than weekday, worsening headways further on Sundays.
+### 4. Phase 1 vs Phase 2 Service Gap
+Phase 2 southern stations (Pettah, SN Junction, Elamkulam, Thykoodam,
+Vyttila, Tripunithura, Vadakkekotta) operate at a **9.0 min headway**
+vs 8.5–8.9 min for Phase 1 stations — confirming newer extensions are
+less frequently served.
 
-## 🗺️ Interactive Map
+---
 
-Open `output/kochi_metro_headway_map.html` in your browser to explore all 25 stops
-with headway and risk data in popups.
+## 🗺️ Interactive Maps
+
+| Map | Description |
+|---|---|
+| [`output/kochi_metro_headway_map.html`](output/kochi_metro_headway_map.html) | Metro stops colored by headway risk |
+| [`output/kochi_connectivity_map.html`](output/kochi_connectivity_map.html) | Full multimodal map — metro + bus + boat + feeder zones |
+
+Open either file in your browser to explore stops with full details in popups.
+
+---
 
 ## 📁 Project Structure
 ```
-kochi-metro-lastmile-risk/
+kochi-transit-analysis/
 ├── README.md
-├── analysis.ipynb          ← main notebook (4 steps)
-├── KMRLOpenData/           ← raw GTFS data
+├── analysis.ipynb               ← main notebook
+├── KMRLOpenData/                ← Kochi Metro GTFS (raw)
 │   ├── stops.txt
 │   ├── routes.txt
 │   ├── trips.txt
 │   ├── stop_times.txt
 │   └── ...
+├── KochiTransportData/          ← Bus & Boat GTFS (Jungle Bus / OSM)
+│   ├── stops.txt
+│   ├── routes.txt
+│   ├── trips.txt
+│   ├── frequencies.txt
+│   └── ...
 └── output/
-    ├── kochi_metro_headway_map.html     ← interactive map
-    └── kochi_metro_headway_analysis.csv ← findings table
+    ├── kochi_metro_headway_map.html       ← headway risk map
+    ├── kochi_connectivity_map.html        ← multimodal connectivity map
+    ├── all_stops_overview.png             ← static overview plot
+    └── kochi_metro_headway_analysis.csv   ← findings table
 ```
+
+---
 
 ## 🛠️ Methodology
 
-1. **Load** GTFS files — stops, routes, trips, stop_times, calendar
-2. **Filter** weekday trips (service_id = `WK`) and count unique trips per stop
-3. **Calculate headway** — `(18 hrs × 60 min) ÷ (trips in one direction)`
-4. **Classify risk** — headway > 10 min = High, 7–10 min = Medium, < 7 min = Low
-5. **Visualize** — interactive Folium map with popups per stop
+### Step 1 — Load GTFS Data
+Load stops, routes, trips, stop_times and calendar from both KMRL
+and Jungle Bus GTFS feeds.
+
+### Step 2 — Headway Analysis
+Filter weekday trips (service_id = `WK`), count unique trips per stop,
+and calculate average headway:
+```
+Headway = (18hrs × 60min) ÷ (trips in one direction)
+```
+Classify stops: >9.0 min = High Risk, 7–9 min = Medium Risk, <7 min = Low Risk.
+
+### Step 3 — Build GeoDataFrames
+Convert all stop tables (metro, bus, boat) to GeoPandas GeoDataFrames
+with point geometries in WGS84 (EPSG:4326).
+
+### Step 4 — 500m Buffer Analysis
+Project all layers to UTM Zone 43N (EPSG:32643) for accurate metre-based
+distances. Draw a 500m buffer around each metro stop and count how many
+bus and boat stops fall inside — this represents walkable last-mile connections.
+
+### Step 5 — Connectivity Classification
+Classify each metro stop:
+- **Well Connected** — ≥15 nearby stops
+- **Moderately Connected** — 5 to 14 nearby stops  
+- **Poorly Connected** — fewer than 5 nearby stops
+
+### Step 6 — Feeder Gap Analysis
+Extend buffer to 1km for poorly connected stops to find how many bus
+stops exist just beyond walking distance — identifying where short
+feeder routes would have the highest impact.
+
+---
+
+## 💡 Recommendations
+
+Based on the analysis, the following interventions would significantly
+improve last-mile connectivity at poorly connected stops:
+
+| Stop | Bus Stops (500m) | Bus Stops (1km) | Recommendation |
+|---|---|---|---|
+| Companypady | 2 | ~9 | Extend nearest bus route by 500m |
+| Ambattukavu | 2 | ~9 | Extend nearest bus route by 500m |
+| Muttom | 4 | ~11 | Add auto-rickshaw/feeder stand |
+| Pathadipalam | 4 | ~11 | Add auto-rickshaw/feeder stand |
+| SN Junction | 4 | ~11 | Extend Phase 2 bus feeder |
+
+---
 
 ## 📦 Requirements
 ```bash
-pip install pandas geopandas shapely folium
+pip install pandas geopandas shapely folium requests
 ```
 
-## 🗃️ Data Source
+## ▶️ How to Run
+```bash
+git clone https://github.com/yourusername/kochi-transit-analysis.git
+cd kochi-transit-analysis
+jupyter notebook analysis.ipynb
+```
 
-[KMRL Open Data](https://kochimetro.org) — General Transit Feed Specification (GTFS)
-format, covering Kochi Metro Route 1 (Aluva ↔ Tripunithura), 25 stops.
+Run all cells in order. The notebook will automatically download the
+Jungle Bus GTFS data on first run.
 
-## 💡 Context
+---
 
-KMRL operates Kerala's first metro system. While the network is expanding,
-frequency improvements — especially on weekends — would significantly improve
-the passenger experience and bring KMRL closer to international urban transit standards.
+## 🗃️ Data Sources
+
+| Dataset | Source | License |
+|---|---|---|
+| KMRL Metro GTFS | [kochimetro.org](https://kochimetro.org/open-data/) | KMRL Open Data |
+| Bus & Boat GTFS | [Jungle Bus / OpenStreetMap](https://jungle-bus.github.io/KochiTransport/) | ODbL |
+
+---
+
+## 🌍 Context
+
+Kochi Metro (KMRL) became the **first metro in India to publish open GTFS
+data** in 2018. Despite good infrastructure, last-mile connectivity remains
+a challenge — particularly for newer Phase 2 stations. This project uses
+open data to identify specific gaps and propose targeted, low-cost solutions
+that planners and policymakers can act on.
+
+---
+
+## 🔮 Future Work
+
+- Peak vs off-peak headway analysis using `stop_times.txt`
+- Fare zone map using `fare_rules.txt`
+- Water Metro integration (KMRL Kochi-1 app data)
+- Amenity analysis using OpenStreetMap (hospitals, IT parks, schools near stops)
+- Compare weekday vs weekend connectivity gaps
+
+---
+
+*Built with Python, GeoPandas, Folium and open transit data.*
+*Jungle Bus © OpenStreetMap contributors*
