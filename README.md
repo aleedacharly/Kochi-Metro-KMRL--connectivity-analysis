@@ -180,6 +180,9 @@ that planners and policymakers can act on.
 - Amenity analysis using OpenStreetMap (hospitals, IT parks, schools near stops)
 - Compare weekday vs weekend connectivity gaps
 
+> ⚠️ Note: Bus/boat stop data (Jungle Bus) was last updated in 2022.
+> Connectivity figures may differ from current ground reality.
+> Metro GTFS data is from KMRL Open Data (2024).
 ---
 
 *Built with Python, GeoPandas, Folium and open transit data.*
