@@ -89,35 +89,52 @@ kochi-transit-analysis/
 
 ### Step 1 — Load GTFS Data
 Load stops, routes, trips, stop_times and calendar from both KMRL
-and Jungle Bus GTFS feeds.
+and Jungle Bus GTFS feeds. GTFS (General Transit Feed Specification)
+is an open standard for publishing public transport schedules and
+geographic information.
 
-### Step 2 — Headway Analysis
+### Step 2 — Service Frequency Analysis
 Filter weekday trips (service_id = `WK`), count unique trips per stop,
-and calculate average headway:
+and calculate average time between trains:
 ```
-Headway = (18hrs × 60min) ÷ (trips in one direction)
+Time between trains = (18hrs × 60min) ÷ (trips in one direction)
 ```
-Classify stops: >9.0 min = High Risk, 7–9 min = Medium Risk, <7 min = Low Risk.
+Classify each stop by how often trains arrive:
+- 🔴 **Low Frequency** — trains every >9.0 min
+- 🟡 **Medium Frequency** — trains every 7–9 min
+- 🟢 **High Frequency** — trains every <7 min
+
+The urban transit benchmark for a good passenger experience is
+a train every 7 minutes or less — at this frequency, passengers
+don't need to check a timetable.
 
 ### Step 3 — Build GeoDataFrames
-Convert all stop tables (metro, bus, boat) to GeoPandas GeoDataFrames
-with point geometries in WGS84 (EPSG:4326).
+Convert all stop tables (metro, bus, boat) into spatial GeoDataFrames
+using GeoPandas, assigning each stop a point geometry based on its
+latitude and longitude coordinates (EPSG:4326).
 
-### Step 4 — 500m Buffer Analysis
-Project all layers to UTM Zone 43N (EPSG:32643) for accurate metre-based
-distances. Draw a 500m buffer around each metro stop and count how many
-bus and boat stops fall inside — this represents walkable last-mile connections.
+### Step 4 — 500m Walking Distance Analysis
+Re-project all layers to UTM Zone 43N (EPSG:32643) so distances
+are measured in metres rather than degrees. Draw a 500m buffer
+around each metro stop — representing a comfortable 6–7 minute
+walk — and count how many bus and boat stops fall inside.
+This measures how easy it is for a passenger to continue their
+journey after getting off the metro.
 
 ### Step 5 — Connectivity Classification
-Classify each metro stop:
-- **Well Connected** — ≥15 nearby stops
-- **Moderately Connected** — 5 to 14 nearby stops  
-- **Poorly Connected** — fewer than 5 nearby stops
+Classify each metro stop based on the number of bus and boat
+stops within 500m walking distance:
+- 🟢 **Well Connected** — ≥15 nearby stops (multiple route options)
+- 🟡 **Moderately Connected** — 5 to 14 nearby stops (some options)
+- 🔴 **Poorly Connected** — fewer than 5 nearby stops (limited options, passenger may struggle to continue journey)
 
 ### Step 6 — Feeder Gap Analysis
-Extend buffer to 1km for poorly connected stops to find how many bus
-stops exist just beyond walking distance — identifying where short
-feeder routes would have the highest impact.
+For poorly connected stops, extend the buffer to 1km and recount
+bus stops. If many stops exist in the 500m–1km zone, it means
+buses are close but just out of walking range — a short feeder
+route extension or auto-rickshaw stand would bridge the gap
+at very low cost.
+
 
 ---
 
