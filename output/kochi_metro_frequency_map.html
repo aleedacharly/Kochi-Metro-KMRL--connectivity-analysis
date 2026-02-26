@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_75c404583cda9762c813b396bad042b6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>
+    
+    
+<div style="position: fixed; bottom: 40px; left: 40px; z-index: 1000;
+     background-color: white; padding: 12px 16px; border-radius: 8px;
+     border: 1px solid #ccc; font-family: Arial; font-size: 13px;">
+  <b>Service Frequency Level</b><br>
+  <i style="background:#E91E63;width:12px;height:4px;display:inline-block;margin-right:6px;margin-bottom:3px;"></i> KMRL Metro Line<br>
+  <i style="background:red;width:12px;height:12px;display:inline-block;border-radius:50%;margin-right:6px;"></i> Low Frequency (&gt;9 min between trains)<br>
+  <i style="background:orange;width:12px;height:12px;display:inline-block;border-radius:50%;margin-right:6px;"></i> Medium Frequency (7–9 min)<br>
+  <i style="background:green;width:12px;height:12px;display:inline-block;border-radius:50%;margin-right:6px;"></i> High Frequency (&lt;7 min)<br>
+  <br>
+  <small>Source: KMRL Open GTFS Data</small>
+</div>
+    
+            <div class="folium-map" id="map_75c404583cda9762c813b396bad042b6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_75c404583cda9762c813b396bad042b6 = L.map(
+                "map_75c404583cda9762c813b396bad042b6",
+                {
+                    center: [10.02, 76.31],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_700b17632bc433628e900a5122a95607 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_700b17632bc433628e900a5122a95607.addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+            var circle_marker_44952712bc7f861173befba4ad1c3c23 = L.circleMarker(
+                [10.1099, 76.3495],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_2b12fce9920ab3d03961f2bdf475daae = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_50faa9bc874a140d69335b151d8aab65 = $(`<div id="html_50faa9bc874a140d69335b151d8aab65" style="width: 100.0%; height: 100.0%;">             <b>Aluva</b><br>             Weekday Trips: 246<br>             Trips (one direction): 123<br>             Avg time between trains: 8.8 min<br>             Service Frequency: Medium Frequency             </div>`)[0];
+                popup_2b12fce9920ab3d03961f2bdf475daae.setContent(html_50faa9bc874a140d69335b151d8aab65);
+            
+        
+
+        circle_marker_44952712bc7f861173befba4ad1c3c23.bindPopup(popup_2b12fce9920ab3d03961f2bdf475daae)
+        ;
+
+        
+    
+    
+            circle_marker_44952712bc7f861173befba4ad1c3c23.bindTooltip(
+                `<div>
+                     Aluva — 8.8 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9ad8efaab43cacf5ab17035ba2afb323 = L.circleMarker(
+                [10.0951, 76.3466],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_378cef13e6d452a90eea47d1e7f538fb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b8cfeaf7ec65083fea1bd27fe8069e36 = $(`<div id="html_b8cfeaf7ec65083fea1bd27fe8069e36" style="width: 100.0%; height: 100.0%;">             <b>Pulinchodu</b><br>             Weekday Trips: 246<br>             Trips (one direction): 123<br>             Avg time between trains: 8.8 min<br>             Service Frequency: Medium Frequency             </div>`)[0];
+                popup_378cef13e6d452a90eea47d1e7f538fb.setContent(html_b8cfeaf7ec65083fea1bd27fe8069e36);
+            
+        
+
+        circle_marker_9ad8efaab43cacf5ab17035ba2afb323.bindPopup(popup_378cef13e6d452a90eea47d1e7f538fb)
+        ;
+
+        
+    
+    
+            circle_marker_9ad8efaab43cacf5ab17035ba2afb323.bindTooltip(
+                `<div>
+                     Pulinchodu — 8.8 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cdc344171981d9c17da933c575a83217 = L.circleMarker(
+                [10.0873, 76.3428],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_163649b5756f4d081ecb43ac524a8bf9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_77997d460741f5b474e5ba6f1a47e8c4 = $(`<div id="html_77997d460741f5b474e5ba6f1a47e8c4" style="width: 100.0%; height: 100.0%;">             <b>Companypady</b><br>             Weekday Trips: 246<br>             Trips (one direction): 123<br>             Avg time between trains: 8.8 min<br>             Service Frequency: Medium Frequency             </div>`)[0];
+                popup_163649b5756f4d081ecb43ac524a8bf9.setContent(html_77997d460741f5b474e5ba6f1a47e8c4);
+            
+        
+
+        circle_marker_cdc344171981d9c17da933c575a83217.bindPopup(popup_163649b5756f4d081ecb43ac524a8bf9)
+        ;
+
+        
+    
+    
+            circle_marker_cdc344171981d9c17da933c575a83217.bindTooltip(
+                `<div>
+                     Companypady — 8.8 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_811ae77e16d889955e64d113c8c160b6 = L.circleMarker(
+                [10.0793, 76.3389],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_43f5aba3bacdcfd7262110cc84865fa0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b4c4c17abf54469c06677afe2383b9ed = $(`<div id="html_b4c4c17abf54469c06677afe2383b9ed" style="width: 100.0%; height: 100.0%;">             <b>Ambattukavu</b><br>             Weekday Trips: 246<br>             Trips (one direction): 123<br>             Avg time between trains: 8.8 min<br>             Service Frequency: Medium Frequency             </div>`)[0];
+                popup_43f5aba3bacdcfd7262110cc84865fa0.setContent(html_b4c4c17abf54469c06677afe2383b9ed);
+            
+        
+
+        circle_marker_811ae77e16d889955e64d113c8c160b6.bindPopup(popup_43f5aba3bacdcfd7262110cc84865fa0)
+        ;
+
+        
+    
+    
+            circle_marker_811ae77e16d889955e64d113c8c160b6.bindTooltip(
+                `<div>
+                     Ambattukavu — 8.8 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b8486bc8a6f13f9903e091e25f320665 = L.circleMarker(
+                [10.0727, 76.3336],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_f69fff64e03ff32f83cdf0adbc892c94 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fa924e3d8ea7a593e6808d77474cd59a = $(`<div id="html_fa924e3d8ea7a593e6808d77474cd59a" style="width: 100.0%; height: 100.0%;">             <b>Muttom</b><br>             Weekday Trips: 255<br>             Trips (one direction): 127<br>             Avg time between trains: 8.5 min<br>             Service Frequency: Medium Frequency             </div>`)[0];
+                popup_f69fff64e03ff32f83cdf0adbc892c94.setContent(html_fa924e3d8ea7a593e6808d77474cd59a);
+            
+        
+
+        circle_marker_b8486bc8a6f13f9903e091e25f320665.bindPopup(popup_f69fff64e03ff32f83cdf0adbc892c94)
+        ;
+
+        
+    
+    
+            circle_marker_b8486bc8a6f13f9903e091e25f320665.bindTooltip(
+                `<div>
+                     Muttom — 8.5 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ba59508dd2101991fad4493d9024ea40 = L.circleMarker(
+                [10.0586, 76.322],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_c5ae402d00ac4544d7a614363444da9e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d0359b38f522e30999c5ea8253d36ed6 = $(`<div id="html_d0359b38f522e30999c5ea8253d36ed6" style="width: 100.0%; height: 100.0%;">             <b>Kalamassery</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg time between trains: 8.9 min<br>             Service Frequency: Medium Frequency             </div>`)[0];
+                popup_c5ae402d00ac4544d7a614363444da9e.setContent(html_d0359b38f522e30999c5ea8253d36ed6);
+            
+        
+
+        circle_marker_ba59508dd2101991fad4493d9024ea40.bindPopup(popup_c5ae402d00ac4544d7a614363444da9e)
+        ;
+
+        
+    
+    
+            circle_marker_ba59508dd2101991fad4493d9024ea40.bindTooltip(
+                `<div>
+                     Kalamassery — 8.9 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b07666a98dc76eec20fcd6aecf034b7c = L.circleMarker(
+                [10.0467, 76.3182],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_95e91165b8a7e6d89e9808fdae20810c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_dc4190cd5c313d5ce72aaa45b5995ef1 = $(`<div id="html_dc4190cd5c313d5ce72aaa45b5995ef1" style="width: 100.0%; height: 100.0%;">             <b>Cochin University</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg time between trains: 8.9 min<br>             Service Frequency: Medium Frequency             </div>`)[0];
+                popup_95e91165b8a7e6d89e9808fdae20810c.setContent(html_dc4190cd5c313d5ce72aaa45b5995ef1);
+            
+        
+
+        circle_marker_b07666a98dc76eec20fcd6aecf034b7c.bindPopup(popup_95e91165b8a7e6d89e9808fdae20810c)
+        ;
+
+        
+    
+    
+            circle_marker_b07666a98dc76eec20fcd6aecf034b7c.bindTooltip(
+                `<div>
+                     Cochin University — 8.9 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c8fb37ecc13e1419fb78cf17398529a9 = L.circleMarker(
+                [10.0361, 76.3144],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_f1bc7fd1fbe5e4e85ac0f2c183c0e51d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7410ec4231041f0a048c6ced767261ba = $(`<div id="html_7410ec4231041f0a048c6ced767261ba" style="width: 100.0%; height: 100.0%;">             <b>Pathadipalam</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg time between trains: 8.9 min<br>             Service Frequency: Medium Frequency             </div>`)[0];
+                popup_f1bc7fd1fbe5e4e85ac0f2c183c0e51d.setContent(html_7410ec4231041f0a048c6ced767261ba);
+            
+        
+
+        circle_marker_c8fb37ecc13e1419fb78cf17398529a9.bindPopup(popup_f1bc7fd1fbe5e4e85ac0f2c183c0e51d)
+        ;
+
+        
+    
+    
+            circle_marker_c8fb37ecc13e1419fb78cf17398529a9.bindTooltip(
+                `<div>
+                     Pathadipalam — 8.9 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7d533c2e6d783865af2e14565d7904ad = L.circleMarker(
+                [10.0251, 76.3083],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_4f4c05e113aa5eafa8fb8fdb5c0f2724 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9c06e4a1175a79a2303461f33c735678 = $(`<div id="html_9c06e4a1175a79a2303461f33c735678" style="width: 100.0%; height: 100.0%;">             <b>Edapally</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg time between trains: 8.9 min<br>             Service Frequency: Medium Frequency             </div>`)[0];
+                popup_4f4c05e113aa5eafa8fb8fdb5c0f2724.setContent(html_9c06e4a1175a79a2303461f33c735678);
+            
+        
+
+        circle_marker_7d533c2e6d783865af2e14565d7904ad.bindPopup(popup_4f4c05e113aa5eafa8fb8fdb5c0f2724)
+        ;
+
+        
+    
+    
+            circle_marker_7d533c2e6d783865af2e14565d7904ad.bindTooltip(
+                `<div>
+                     Edapally — 8.9 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7432982ffe37b597a08b93d2b39347ee = L.circleMarker(
+                [10.0152, 76.3023],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_b9be4db5fd1d21156d90756cb290e078 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9bb44917fc8e3f067d9b823103108bc9 = $(`<div id="html_9bb44917fc8e3f067d9b823103108bc9" style="width: 100.0%; height: 100.0%;">             <b>Changampuzha Park</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg time between trains: 8.9 min<br>             Service Frequency: Medium Frequency             </div>`)[0];
+                popup_b9be4db5fd1d21156d90756cb290e078.setContent(html_9bb44917fc8e3f067d9b823103108bc9);
+            
+        
+
+        circle_marker_7432982ffe37b597a08b93d2b39347ee.bindPopup(popup_b9be4db5fd1d21156d90756cb290e078)
+        ;
+
+        
+    
+    
+            circle_marker_7432982ffe37b597a08b93d2b39347ee.bindTooltip(
+                `<div>
+                     Changampuzha Park — 8.9 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c072ff7f022ef5c4fd7369a2ef8f9bd3 = L.circleMarker(
+                [10.0064, 76.3048],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_c6d761b17b1145caf6ad98e58a248bad = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f82f020764d15ef8330f15c0df930507 = $(`<div id="html_f82f020764d15ef8330f15c0df930507" style="width: 100.0%; height: 100.0%;">             <b>Palarivattom</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg time between trains: 8.9 min<br>             Service Frequency: Medium Frequency             </div>`)[0];
+                popup_c6d761b17b1145caf6ad98e58a248bad.setContent(html_f82f020764d15ef8330f15c0df930507);
+            
+        
+
+        circle_marker_c072ff7f022ef5c4fd7369a2ef8f9bd3.bindPopup(popup_c6d761b17b1145caf6ad98e58a248bad)
+        ;
+
+        
+    
+    
+            circle_marker_c072ff7f022ef5c4fd7369a2ef8f9bd3.bindTooltip(
+                `<div>
+                     Palarivattom — 8.9 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c9a50f3ee738139eae682a9a800ec5ce = L.circleMarker(
+                [10.0002, 76.2989],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_64f14b10d9b4bf9038a473153d92bac5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_dc0abb6f2f144d1e82a4339d5330d49d = $(`<div id="html_dc0abb6f2f144d1e82a4339d5330d49d" style="width: 100.0%; height: 100.0%;">             <b>JLN Stadium</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg time between trains: 8.9 min<br>             Service Frequency: Medium Frequency             </div>`)[0];
+                popup_64f14b10d9b4bf9038a473153d92bac5.setContent(html_dc0abb6f2f144d1e82a4339d5330d49d);
+            
+        
+
+        circle_marker_c9a50f3ee738139eae682a9a800ec5ce.bindPopup(popup_64f14b10d9b4bf9038a473153d92bac5)
+        ;
+
+        
+    
+    
+            circle_marker_c9a50f3ee738139eae682a9a800ec5ce.bindTooltip(
+                `<div>
+                     JLN Stadium — 8.9 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_74fdf8d492e0402f733fd01057322669 = L.circleMarker(
+                [9.9943, 76.2914],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_228f20f2a49342cd9263bf28ce3e9ddc = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4d811fabe05b9761c41e94ea298c61fc = $(`<div id="html_4d811fabe05b9761c41e94ea298c61fc" style="width: 100.0%; height: 100.0%;">             <b>Kaloor</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg time between trains: 8.9 min<br>             Service Frequency: Medium Frequency             </div>`)[0];
+                popup_228f20f2a49342cd9263bf28ce3e9ddc.setContent(html_4d811fabe05b9761c41e94ea298c61fc);
+            
+        
+
+        circle_marker_74fdf8d492e0402f733fd01057322669.bindPopup(popup_228f20f2a49342cd9263bf28ce3e9ddc)
+        ;
+
+        
+    
+    
+            circle_marker_74fdf8d492e0402f733fd01057322669.bindTooltip(
+                `<div>
+                     Kaloor — 8.9 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9594d6ec504525f24aa943b9ac49d60a = L.circleMarker(
+                [9.9913775, 76.2883601],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_f74d4a1b56d79778f22d8d9ead8ad19d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b0b205c468df55af86dcec7b7a2d8fa6 = $(`<div id="html_b0b205c468df55af86dcec7b7a2d8fa6" style="width: 100.0%; height: 100.0%;">             <b>Town Hall</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg time between trains: 8.9 min<br>             Service Frequency: Medium Frequency             </div>`)[0];
+                popup_f74d4a1b56d79778f22d8d9ead8ad19d.setContent(html_b0b205c468df55af86dcec7b7a2d8fa6);
+            
+        
+
+        circle_marker_9594d6ec504525f24aa943b9ac49d60a.bindPopup(popup_f74d4a1b56d79778f22d8d9ead8ad19d)
+        ;
+
+        
+    
+    
+            circle_marker_9594d6ec504525f24aa943b9ac49d60a.bindTooltip(
+                `<div>
+                     Town Hall — 8.9 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_714e859844927164c1f522968927057a = L.circleMarker(
+                [9.9834, 76.2823],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_b49d458e4d70faab73c184e4dac8aed3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_dc876ed6ca85c9184deacfa6fe9151c8 = $(`<div id="html_dc876ed6ca85c9184deacfa6fe9151c8" style="width: 100.0%; height: 100.0%;">             <b>MG Road</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg time between trains: 8.9 min<br>             Service Frequency: Medium Frequency             </div>`)[0];
+                popup_b49d458e4d70faab73c184e4dac8aed3.setContent(html_dc876ed6ca85c9184deacfa6fe9151c8);
+            
+        
+
+        circle_marker_714e859844927164c1f522968927057a.bindPopup(popup_b49d458e4d70faab73c184e4dac8aed3)
+        ;
+
+        
+    
+    
+            circle_marker_714e859844927164c1f522968927057a.bindTooltip(
+                `<div>
+                     MG Road — 8.9 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_51061af02cb50d7b8d46c0a0620e1c1d = L.circleMarker(
+                [9.9732, 76.2851],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_aed7f6bec49246db78d114f70ff036a9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ffd4880c98452a991962cf6455fdcfde = $(`<div id="html_ffd4880c98452a991962cf6455fdcfde" style="width: 100.0%; height: 100.0%;">             <b>Maharajas College</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg time between trains: 8.9 min<br>             Service Frequency: Medium Frequency             </div>`)[0];
+                popup_aed7f6bec49246db78d114f70ff036a9.setContent(html_ffd4880c98452a991962cf6455fdcfde);
+            
+        
+
+        circle_marker_51061af02cb50d7b8d46c0a0620e1c1d.bindPopup(popup_aed7f6bec49246db78d114f70ff036a9)
+        ;
+
+        
+    
+    
+            circle_marker_51061af02cb50d7b8d46c0a0620e1c1d.bindTooltip(
+                `<div>
+                     Maharajas College — 8.9 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_36d7cb5d248630458ec831e00af294a4 = L.circleMarker(
+                [9.9686042, 76.2895744],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_ebc2b7a9aa0c04741805d088643fc12d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d6c2a6197932cbdb70e047e54ff2b68f = $(`<div id="html_d6c2a6197932cbdb70e047e54ff2b68f" style="width: 100.0%; height: 100.0%;">             <b>Ernakulam South</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg time between trains: 8.9 min<br>             Service Frequency: Medium Frequency             </div>`)[0];
+                popup_ebc2b7a9aa0c04741805d088643fc12d.setContent(html_d6c2a6197932cbdb70e047e54ff2b68f);
+            
+        
+
+        circle_marker_36d7cb5d248630458ec831e00af294a4.bindPopup(popup_ebc2b7a9aa0c04741805d088643fc12d)
+        ;
+
+        
+    
+    
+            circle_marker_36d7cb5d248630458ec831e00af294a4.bindTooltip(
+                `<div>
+                     Ernakulam South — 8.9 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bd60535fadfc2b2d4a567dc418a2cdf5 = L.circleMarker(
+                [9.9665809, 76.2981877],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_cc22a504d14aa1ae5bb2d625a1367c2d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_840f96d04cc7e0f0663f1e36cd33a776 = $(`<div id="html_840f96d04cc7e0f0663f1e36cd33a776" style="width: 100.0%; height: 100.0%;">             <b>Kadavanthra</b><br>             Weekday Trips: 242<br>             Trips (one direction): 121<br>             Avg time between trains: 8.9 min<br>             Service Frequency: Medium Frequency             </div>`)[0];
+                popup_cc22a504d14aa1ae5bb2d625a1367c2d.setContent(html_840f96d04cc7e0f0663f1e36cd33a776);
+            
+        
+
+        circle_marker_bd60535fadfc2b2d4a567dc418a2cdf5.bindPopup(popup_cc22a504d14aa1ae5bb2d625a1367c2d)
+        ;
+
+        
+    
+    
+            circle_marker_bd60535fadfc2b2d4a567dc418a2cdf5.bindTooltip(
+                `<div>
+                     Kadavanthra — 8.9 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d44455d48082048e70acb8169439278e = L.circleMarker(
+                [9.9671248, 76.3084899],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_4c8b1fed753b0863e00131d12bb5ad5b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6640cbd23c40bd9b798ecd343b2f5302 = $(`<div id="html_6640cbd23c40bd9b798ecd343b2f5302" style="width: 100.0%; height: 100.0%;">             <b>Elamkulam</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg time between trains: 9.0 min<br>             Service Frequency: Low Frequency             </div>`)[0];
+                popup_4c8b1fed753b0863e00131d12bb5ad5b.setContent(html_6640cbd23c40bd9b798ecd343b2f5302);
+            
+        
+
+        circle_marker_d44455d48082048e70acb8169439278e.bindPopup(popup_4c8b1fed753b0863e00131d12bb5ad5b)
+        ;
+
+        
+    
+    
+            circle_marker_d44455d48082048e70acb8169439278e.bindTooltip(
+                `<div>
+                     Elamkulam — 9.0 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3bdbb225041b40941ebc54ad180d3c7d = L.circleMarker(
+                [9.9675457, 76.3203664],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_861eeaebe171f68d9b792d23730205fd = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_690ed461c5b54d2c02c920c8e2a6e264 = $(`<div id="html_690ed461c5b54d2c02c920c8e2a6e264" style="width: 100.0%; height: 100.0%;">             <b>Vyttila</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg time between trains: 9.0 min<br>             Service Frequency: Low Frequency             </div>`)[0];
+                popup_861eeaebe171f68d9b792d23730205fd.setContent(html_690ed461c5b54d2c02c920c8e2a6e264);
+            
+        
+
+        circle_marker_3bdbb225041b40941ebc54ad180d3c7d.bindPopup(popup_861eeaebe171f68d9b792d23730205fd)
+        ;
+
+        
+    
+    
+            circle_marker_3bdbb225041b40941ebc54ad180d3c7d.bindTooltip(
+                `<div>
+                     Vyttila — 9.0 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6dc6ea341106d4f42503b84c7eb5b572 = L.circleMarker(
+                [9.9600311, 76.3236762],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_59300f8dcb59db6001bf806541aa85d9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6cf16a863894d20109c312373c196083 = $(`<div id="html_6cf16a863894d20109c312373c196083" style="width: 100.0%; height: 100.0%;">             <b>Thykoodam</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg time between trains: 9.0 min<br>             Service Frequency: Low Frequency             </div>`)[0];
+                popup_59300f8dcb59db6001bf806541aa85d9.setContent(html_6cf16a863894d20109c312373c196083);
+            
+        
+
+        circle_marker_6dc6ea341106d4f42503b84c7eb5b572.bindPopup(popup_59300f8dcb59db6001bf806541aa85d9)
+        ;
+
+        
+    
+    
+            circle_marker_6dc6ea341106d4f42503b84c7eb5b572.bindTooltip(
+                `<div>
+                     Thykoodam — 9.0 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_77fb9e213b6d67b90074849a9f8f2687 = L.circleMarker(
+                [9.9524842, 76.3302101],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_9854a826830223ffa551835eb8e2fe2a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_246a62843dd8128efc47daa742122bd3 = $(`<div id="html_246a62843dd8128efc47daa742122bd3" style="width: 100.0%; height: 100.0%;">             <b>Pettah</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg time between trains: 9.0 min<br>             Service Frequency: Low Frequency             </div>`)[0];
+                popup_9854a826830223ffa551835eb8e2fe2a.setContent(html_246a62843dd8128efc47daa742122bd3);
+            
+        
+
+        circle_marker_77fb9e213b6d67b90074849a9f8f2687.bindPopup(popup_9854a826830223ffa551835eb8e2fe2a)
+        ;
+
+        
+    
+    
+            circle_marker_77fb9e213b6d67b90074849a9f8f2687.bindTooltip(
+                `<div>
+                     Pettah — 9.0 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2c3c63e26c44b58da06cb1d9f57c17aa = L.circleMarker(
+                [9.952838, 76.3394827],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_ea2c37f26ba2d3e915d4690dcce872de = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_8b6b0fe5442176e003c45a00f301025a = $(`<div id="html_8b6b0fe5442176e003c45a00f301025a" style="width: 100.0%; height: 100.0%;">             <b>Vadakkekotta</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg time between trains: 9.0 min<br>             Service Frequency: Low Frequency             </div>`)[0];
+                popup_ea2c37f26ba2d3e915d4690dcce872de.setContent(html_8b6b0fe5442176e003c45a00f301025a);
+            
+        
+
+        circle_marker_2c3c63e26c44b58da06cb1d9f57c17aa.bindPopup(popup_ea2c37f26ba2d3e915d4690dcce872de)
+        ;
+
+        
+    
+    
+            circle_marker_2c3c63e26c44b58da06cb1d9f57c17aa.bindTooltip(
+                `<div>
+                     Vadakkekotta — 9.0 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a5fa143f6c09c9012f5a2ce2e6f44b6b = L.circleMarker(
+                [9.9547532, 76.3458505],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_fff0a05638a351878c0b55653a8b1764 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_94a2342775d2bb92f3e3ca4c587170dd = $(`<div id="html_94a2342775d2bb92f3e3ca4c587170dd" style="width: 100.0%; height: 100.0%;">             <b>SN Junction</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg time between trains: 9.0 min<br>             Service Frequency: Low Frequency             </div>`)[0];
+                popup_fff0a05638a351878c0b55653a8b1764.setContent(html_94a2342775d2bb92f3e3ca4c587170dd);
+            
+        
+
+        circle_marker_a5fa143f6c09c9012f5a2ce2e6f44b6b.bindPopup(popup_fff0a05638a351878c0b55653a8b1764)
+        ;
+
+        
+    
+    
+            circle_marker_a5fa143f6c09c9012f5a2ce2e6f44b6b.bindTooltip(
+                `<div>
+                     SN Junction — 9.0 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0cca6a2f550f742cadbd102d231026f9 = L.circleMarker(
+                [9.95078, 76.35183],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+        var popup_4a8e22d2d7e46dce528b0ce396e1c07e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2d59162ef60c2bfba9d16c0c9022c148 = $(`<div id="html_2d59162ef60c2bfba9d16c0c9022c148" style="width: 100.0%; height: 100.0%;">             <b>Tripunithura</b><br>             Weekday Trips: 240<br>             Trips (one direction): 120<br>             Avg time between trains: 9.0 min<br>             Service Frequency: Low Frequency             </div>`)[0];
+                popup_4a8e22d2d7e46dce528b0ce396e1c07e.setContent(html_2d59162ef60c2bfba9d16c0c9022c148);
+            
+        
+
+        circle_marker_0cca6a2f550f742cadbd102d231026f9.bindPopup(popup_4a8e22d2d7e46dce528b0ce396e1c07e)
+        ;
+
+        
+    
+    
+            circle_marker_0cca6a2f550f742cadbd102d231026f9.bindTooltip(
+                `<div>
+                     Tripunithura — 9.0 min between trains
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_d4cd63a5f56885d37dbcd042ff0f046e = L.polyline(
+                [[10.1099, 76.3495], [10.0951, 76.3466], [10.0873, 76.3428], [10.0793, 76.3389], [10.0727, 76.3336], [10.0586, 76.322], [10.0467, 76.3182], [10.0361, 76.3144], [10.0251, 76.3083], [10.0152, 76.3023], [10.0064, 76.3048], [10.0002, 76.2989], [9.9943, 76.2914], [9.9913775, 76.2883601], [9.9834, 76.2823], [9.9732, 76.2851], [9.9686042, 76.2895744], [9.9665809, 76.2981877], [9.9671248, 76.3084899], [9.9675457, 76.3203664], [9.9600311, 76.3236762], [9.9524842, 76.3302101], [9.952838, 76.3394827], [9.9547532, 76.3458505], [9.95078, 76.35183]],
+                {"bubblingMouseEvents": true, "color": "#E91E63", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#E91E63", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+            poly_line_d4cd63a5f56885d37dbcd042ff0f046e.bindTooltip(
+                `<div>
+                     KMRL Metro Line — Aluva ↔ Tripunithura
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_79476c0e131baa7dfdc722d17216af66 = L.marker(
+                [10.02, 76.31],
+                {
+}
+            ).addTo(map_75c404583cda9762c813b396bad042b6);
+        
+    
+            var icon_8a219dd6738e37b2127cbbd988536df8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e37e1b407c79ba7e88b2ad63180f1612 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4fba17c035fd0524239f928469fd030d = $(`<div id="html_4fba17c035fd0524239f928469fd030d" style="width: 100.0%; height: 100.0%;">Kochi, Kerala, India</div>`)[0];
+                popup_e37e1b407c79ba7e88b2ad63180f1612.setContent(html_4fba17c035fd0524239f928469fd030d);
+            
+        
+
+        marker_79476c0e131baa7dfdc722d17216af66.bindPopup(popup_e37e1b407c79ba7e88b2ad63180f1612)
+        ;
+
+        
+    
+    
+            marker_79476c0e131baa7dfdc722d17216af66.bindTooltip(
+                `<div>
+                     Kochi, Kerala, India
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_79476c0e131baa7dfdc722d17216af66.setIcon(icon_8a219dd6738e37b2127cbbd988536df8);
+            
+    
+            var tile_layer_d13bbe3de087445bc175a48cafeea9c4 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detect_retina": false, "max_native_zoom": 20, "max_zoom": 20, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+            var mini_map_a7021e9a3dbf38f38afbf819a95dcc8e = new L.Control.MiniMap(
+                tile_layer_d13bbe3de087445bc175a48cafeea9c4,
+                {
+  "position": "bottomright",
+  "width": 150,
+  "height": 150,
+  "collapsedWidth": 25,
+  "collapsedHeight": 25,
+  "zoomLevelOffset": -7,
+  "centerFixed": false,
+  "zoomAnimation": false,
+  "toggleDisplay": true,
+  "autoToggleDisplay": false,
+  "minimized": false,
+}
+            );
+            map_75c404583cda9762c813b396bad042b6.addControl(mini_map_a7021e9a3dbf38f38afbf819a95dcc8e);
+        
+</script>
+</html>
