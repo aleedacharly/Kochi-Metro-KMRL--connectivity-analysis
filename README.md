@@ -6,7 +6,7 @@ A data analysis project using open GTFS data from **KMRL (Kochi Metro)** and
 buses and boats within walking distance.
 
 ---
-![Kochi Multimodal Transit Connectivity Map](connectivity_map_preview.png)
+![Kochi Multimodal Transit Connectivity Map](connectivity_map.png)
 ---
 ## 🔍 Key Findings
 
