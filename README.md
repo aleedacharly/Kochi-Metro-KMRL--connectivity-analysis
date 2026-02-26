@@ -4,7 +4,7 @@ A data analysis project using open GTFS data from **KMRL (Kochi Metro)** and
 **Jungle Bus / OpenStreetMap** to evaluate last-mile connectivity across all
 25 Kochi Metro stops — measuring how well each metro stop is served by
 buses and boats within walking distance.
-
+![Kochi Multimodal Transit Connectivity Map](connectivity_map_preview.png)
 ---
 
 ## 🔍 Key Findings
